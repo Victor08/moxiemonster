@@ -1,0 +1,20 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "name": "moxieMonster",
+  "description": "A tutorial application for AngularJS",
+  "repository": "https://github.com/Victor08/moxiemonster.git",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.3.1",
+    "lodash": "~3",
+    "gulp": "*",
+    "gulp-less": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-plumber": "*",
+    "fs": "*"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  }
+}

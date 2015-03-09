@@ -1,0 +1,28 @@
+{
+  "name": "moxieMonster",
+  "description": "A tutorial project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Victor08/moxiemonster.git",
+  "private": true,
+  "dependencies": {
+    "angular": "1.3.x",
+    "angular-mocks": "1.3.x",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "angular-route": "1.3.x"
+  },
+  "public": {
+    "bootstrap": [
+      "fonts/**/*"
+    ],
+    "angular": [
+      "*.js"
+    ],
+    "angular-mocks": [
+      "*.js"
+    ],
+    "jquery": [
+      "*.js"
+    ]
+  }
+}
