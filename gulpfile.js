@@ -2,24 +2,21 @@
  * Plugins
  */
 var
-    gulp            = require('gulp')
-    , plumber       = require('gulp-plumber')
-    , less          = require('gulp-less')
-    , sourcemaps    = require('gulp-sourcemaps')
-    , _             = require('lodash')
-    , fs            = require('fs')
-    ;
+    gulp          = require('gulp'),
+    plumber       = require('gulp-plumber'),
+    less          = require('gulp-less'),
+    sourcemaps    = require('gulp-sourcemaps'),
+    _             = require('lodash'),
+    fs            = require('fs');
 
 
 /**
  * Paths
  */
-var
-      public_css    = './app/assets/css'
-    , resources     = './resources'
-    , vendor        = './resources/vendor'
-    , public_vendor = './app/assets/vendor'
-    ;
+var public_css    = './app/assets/css',
+    resources     = './resources',
+    vendor        = './resources/vendor',
+    public_vendor = './app/assets/vendor';
 
 gulp.task('default', function () {
     gulp.watch(assets + '/less/**/*.less', ['less']);

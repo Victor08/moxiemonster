@@ -14,7 +14,8 @@
   },
   "public": {
     "bootstrap": [
-      "fonts/**/*"
+      "fonts/**/*",
+      "dist/js/*"
     ],
     "angular": [
       "*.js"
@@ -26,7 +27,8 @@
       "*.js"
     ],
     "jquery": [
-      "dist/*.js"
+      "dist/*.js",
+      "dist/*.map"
     ]
   }
 }
