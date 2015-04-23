@@ -17,9 +17,30 @@
                 <div class="panel-body" >
                     {{ greeting }}
                 </div>
-                <div class="panel-body" ng-repeat="moxie in moxies">
+                <div class="alert alert-info">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Search</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" ng-model="search"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Sort by</label>
+                            <div class="col-sm-8">
+                                <select class="form-control" ng-model="orderProp">
+                                    <option value="title">Title</option>
+                                    <option value="dueDate">Date</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="panel-body" ng-repeat="moxie in moxies | filter:search | orderBy:orderProp">
                     {{ moxie.title }} <strong>wtf</strong> {{ moxie.dueDate }}
                 </div>
+
             </div>
         </div>
     </div>
