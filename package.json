@@ -11,7 +11,8 @@
     "gulp-less": "*",
     "gulp-sourcemaps": "*",
     "gulp-plumber": "*",
-    "fs": "*"
+    "fs": "*",
+    "merge-stream": "~0.1.7"
   },
   "scripts": {
     "postinstall": "bower install"
