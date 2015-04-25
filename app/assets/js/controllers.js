@@ -4,11 +4,14 @@
 
 var moxControllers = angular.module('moxControllers',[]);
 
-moxControllers.controller('listController', ['$scope', function($scope){
+moxControllers.controller('list', ['$scope', '$http', function($scope, $http){
     $scope.greeting = 'hey what\'s up?';
-    $scope.moxies = [
-        {title: "become a millionaire", dueDate: "11-02-2016"},
-        {title: "overcome my lazieness", dueDate: "25-06-2011"},
-        {title: "achieve max sleep time", dueDate: "13-04-2020"}
-    ]
+    $http.get('data/moxies.json').success(function(data){
+        $scope.moxies = data;
+    });
+    $scope.orderProp = 'dueDate';
+}]);
+
+moxControllers.controller('detail', ['$scope', '$routeParams', function($scope, $routeParams){
+    $scope.moxieId = $routeParams.moxieId;
 }]);

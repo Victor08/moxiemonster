@@ -1,0 +1,36 @@
+<div class="row" ng-controller="list">
+    <div class="col-md-12">
+        <div class="alert alert-info">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Search</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" ng-model="search"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Sort by</label>
+                    <div class="col-sm-4">
+                        <select class="form-control" ng-model="orderProp">
+                            <option value="title">Title</option>
+                            <option value="dueDate">Date</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="panel-body" ng-repeat="moxie in moxies | filter:search | orderBy:orderProp">
+            <p>
+                <a href="#/moxie/{{moxie.id}}"> {{ moxie.title }} </a>
+            </p>
+            <p>
+                <strong>wtf</strong> {{ moxie.dueDate }}
+            </p>
+            <p>
+                will i win?
+                <strong>{{ moxie.winState | testFilter }}</strong>
+            </p>
+
+        </div>
+    </div>
+</div>
