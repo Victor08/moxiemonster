@@ -1,5 +1,20 @@
-var moxieApp = angular.module('moxies',['ngRoute', 'moxControllers', 'moxFilters' ])
-    .config(['$routeProvider', function($routeProvider){
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/moxieMonsternpm', function(err) {
+    if(err) {
+        console.log('connection error', err);
+    } else {
+        console.log('connection successful');
+    }
+});
+
+var moxies = require('./routes/moxies');
+var routes = require('./routes/index')
+app.use('/', routes);
+app.use('/moxies', moxies);
+
+var moxieApp = angular.module('moxies',['ngRoute', 'moxControllers', 'moxFilters' ]);
+   /* .config(['$routeProvider', function($routeProvider){
         $routeProvider
             .when('/moxies', {
                 templateUrl: 'moxies.html',
@@ -12,4 +27,4 @@ var moxieApp = angular.module('moxies',['ngRoute', 'moxControllers', 'moxFilters
             .otherwise({
                 redirectTo: '/moxies'
             });
-    }]);
+    }]);*/
