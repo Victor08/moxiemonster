@@ -9,7 +9,7 @@ mongoose.connect('mongodb://localhost/moxieMonsternpm', function(err) {
 });
 
 var moxies = require('./routes/moxies');
-var routes = require('./routes/index')
+var routes = require('./routes/index');
 app.use('/', routes);
 app.use('/moxies', moxies);
 
